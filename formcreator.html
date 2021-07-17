@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script type="text/javascript">
+            function result(){
+                points_made()
+                rebounds_made()
+                assists_made()
+                var games= document.getElementById("game").value;
+                var points= document.getElementById("point").value;    
+                var rebounds= document.getElementById("rebound").value;    
+                var answerString = "";
+            }
+
+                function points_made(){
+                    points= points / games
+                    answerString= "Your players is averaging";
+                    alert(answerString);
+                }
+                
+                function rebounds_made(){
+                    rebounds= rebounds / games
+                    answerString= "Your players is averaging";
+                    alert(answerString);    
+                }
+                
+        </script>
+        <style>
+        
+            body{
+                text-align:center;
+                color:white;
+                background-color:black;
+            }
+        
+        </style>
+
+        <title>Basketball Calculator</title>
+    </head>
+
+    <body>
+    
+    <h1>Basketball Calculator</h1>
+    <p>
+        <u><h3>Type the amount of points, rebounds, and assist that your player averaged this season</h3></u>
+    </p>
+      
+    <form>
+        <p>
+            <label for= "draft">Enter the amount of games played:</label> 
+            <input type="text" id= "game" value=""><br>
+        </p>
+        
+        <p>
+            <label for= "draft">Enter the total amount of points scored:</label> 
+            <input type="text" id= "point" value=""><br>
+        </p>
+        
+        <p>
+            <label for= "draft">The average is:</label>
+            <input type="text" id= "average" value=""><br>
+        </p>
+        
+
+    <button onclick="result()">Submit</button>
+
+    </form>
+    
+    </body>
+</html>
