@@ -5,24 +5,11 @@
         <script type="text/javascript">
             function result(){
                 var games= document.getElementById("game").value;
-                var points= document.getElementById("point").value;    
-                var rebounds= document.getElementById("average").value;    
-                var answerString = "hello dolly";
-                alert(answerString);
-            }
-
-                function points_made(){
-                    points= points / games
-                    answerString= "Your players is averaging";
-                    alert(answerString);
-                }
-                
-                function rebounds_made(){
-                    rebounds= rebounds / games
-                    answerString= "Your players is averaging";
-                    alert(answerString);    
-                }
-                
+                var points= document.getElementById("point").value; 
+                var rebounds    
+                var average = games/points;    ;
+                alert('your average is ' + average);
+            }   
         </script>
         <style>
         
@@ -55,12 +42,6 @@
             <input type="text" id= "point" value=""><br>
         </p>
         
-        <p>
-            <label for= "draft">The average is:</label>
-            <input type="text" id= "average" value=""><br>
-        </p>
-        
-
     <button onclick="result()">Submit</button>
 
     </form>
