@@ -2,15 +2,18 @@
 <html>
     
     <head>
+        <title>Basketball Calculator</title>
+
         <script type="text/javascript">
             function result(){
                 var games= document.getElementById("game").value;
                 var points= document.getElementById("point").value; 
                 var rebounds    
-                var average = games/points;    ;
-                alert('your average is ' + average);
+                var average = points/games;
+                var averages= document.getElementById("average").value;
             }   
         </script>
+
         <style>
         
             body{
@@ -18,10 +21,8 @@
                 color:white;
                 background-color:black;
             }
-        
         </style>
 
-        <title>Basketball Calculator</title>
     </head>
 
     <body>
@@ -31,7 +32,7 @@
         <u><h3>Type the amount of points, rebounds, and assist that your player averaged this season</h3></u>
     </p>
       
-    <form>
+    <form onsubmit= "average">
         <p>
             <label for= "draft">Enter the amount of games played:</label> 
             <input type="text" id= "game" value=""><br>
@@ -41,8 +42,12 @@
             <label for= "draft">Enter the total amount of points scored:</label> 
             <input type="text" id= "point" value=""><br>
         </p>
-        
-    <button onclick="result()">Submit</button>
+
+        <input type="text" id="average"><br>
+
+        <p>
+        <button onclick="average">Submit</button><br>
+        </p>
 
     </form>
     

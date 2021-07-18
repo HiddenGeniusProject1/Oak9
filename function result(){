@@ -1,0 +1,28 @@
+function result(){
+    points_made()
+    rebounds_made()
+    assists_made()
+    var games= document.getElementById("game").value;
+    var points= document.getElementById("point").value;    
+    var rebounds= document.getElementById("rebound").value;    
+    var assists= document.getElementById("assist").value;
+    var answerString = "";
+}
+
+    function points_made(){
+        points= points / games
+        answerString= "Your players is averaging";
+        alert(answerString);
+    }
+    
+    function rebounds_made(){
+        rebounds= rebounds / games
+        answerString= "Your players is averaging";
+        alert(answerString);    
+    }
+    
+    function assists_made(){
+        assists= assists / games
+        answerString= "Your players is averaging";
+        alert(answerString);    
+    }
