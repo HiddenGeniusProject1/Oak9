@@ -9,7 +9,7 @@
                 var games= document.getElementById("game").value;
                 var points= document.getElementById("point").value;  
                 var average = points/games;
-                document.getElementById("average").value = average
+                calc.average = average;
             }   
         </script>
 
@@ -31,7 +31,7 @@
         <u><h3>Type the amount of points, rebounds, and assist that your player averaged this season</h3></u>
     </p>
       
-    <form onsubmit = "average">
+    <form name = "calc">
         <p>
             <label for= "draft">Enter the amount of games played:</label> 
             <input type="text" id= "game" value=""><br>
@@ -41,9 +41,9 @@
             <input type="text" id= "point" value=""><br>
         </p>
 
-        <input type="text" id="average"><br>
+        <input type="text" name="average"><br>
         <p>
-        <button onclick= "alert(average)">Submit</button><br>
+        <input type = button  value = "Submit"><br>
         </p>
 
     </form>
