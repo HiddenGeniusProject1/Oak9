@@ -9,7 +9,7 @@
                 var games= document.getElementById("game").value;
                 var points= document.getElementById("point").value;  
                 var average = points/games;
-                calc.average = average;
+                calc.average.value = average;
             }   
         </script>
 
@@ -43,7 +43,7 @@
 
         <input type="text" name="average"><br>
         <p>
-        <input type = button  value = "Submit"><br>
+        <input type = button  value = "Submit" onclick="result()"><br>
         </p>
 
     </form>
