@@ -2,12 +2,17 @@
 <html>
     
         <script type="text/javascript">
-            function result(){
+            function avgPoints(){
                 var games= document.getElementById("game").value;
                 var points= document.getElementById("point").value;  
                 var average = points/games;
                 calc.average.value = average;
-            }   
+            }
+
+            function percent(){
+                var prc = document.getElementById("point").value / document.getElementById("game");
+                calc.average.value = prc;
+            }
         </script>
 
         <style>
@@ -65,17 +70,21 @@
     <form name = "calc">
         <p>
             <label for= "draft">Enter the amount of games played:</label> 
-            <input type="text" id= "game" value=""><br>
+            <input type="text" id= "game" value="" name= "games"><br>
         
         <p>
             <label for= "draft">Enter the total amount of points scored:</label> 
-            <input type="text" id= "point" value=""><br>
+            <input type="text" id= "point" value="" name= "games"><br>
         </p>
 
         <label for= "draft">Your average is:</label>
-        <input type="text" name = "average"><br>
+        <input type="text" name = "average" id="avg" value = "1000"><br>
         <p>
-        <input type = button  value = "Submit" onclick= "result()"><br>
+        <input type = button  value = "Average Points Per Game" onclick= "avgPoints()"><br>
+        </p>
+
+        <p>
+            <input type = button value = "Percent" onclick= "percent()">
         </p>
 
     </form>
