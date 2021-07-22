@@ -10,9 +10,18 @@
             }
 
             function percent(){
-                var prc = document.getElementById("point").value / document.getElementById("game");
+                var prc = document.getElementById("game").value / document.getElementById("point").value;
                 calc.average.value = prc;
             }
+
+            function label1(){
+                document.getElementById("click1").label = "Your Average Is:";
+            }
+
+            function label2(){
+                document.getElementById("click2").label = "Your Percentage Is:";
+            }
+
         </script>
 
         <style>
@@ -77,13 +86,17 @@
             <input type="text" id= "point" value="" name= "games"><br>
         </p>
 
-        <label for= "draft">Your average is:</label>
-        <input type="text" name = "average" id="avg" value = "1000"><br>
         <p>
-        <input type = button  value = "Average Points Per Game" onclick= "avgPoints()"><br>
+            <label id= "click1">
+            <input type="text" name = "average" id="avg" value = ""><br>
         </p>
 
         <p>
+            <input type = button value = "Average Points Per Game" onclick= "avgPoints()"><br>
+        </p>
+
+        <p>
+            <label id="click2">
             <input type = button value = "Percent" onclick= "percent()">
         </p>
 
