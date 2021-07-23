@@ -15,11 +15,11 @@
             }
 
             function label1(){
-                document.getElementById("click1").label = "Your Average Is:";
+                var avg1 = document.getElementById("click1").label = "Your Average Is:";
             }
 
             function label2(){
-                document.getElementById("click2").label = "Your Percentage Is:";
+                var prc1 = document.getElementById("click2").label = "Your Percentage Is:";             
             }
 
         </script>
@@ -67,7 +67,7 @@
             <li><a href= "Leadershipfile.html">Leadership</a></li>
             <li><a href= "History.html">History</a></li>
             <li><a href= "Players.html">Players</a></li>
-            <li><a href= "formcreator.html">Statistics Calculator</a></li>            
+            <li><a href= "formcreator.html">Statistics Calculator</a></li> 
             <li><a href= "Sources.html">Sources</a></li>
             
        </ul>
@@ -83,11 +83,11 @@
         
         <p>
             <label for= "draft">Enter the total amount of points scored:</label> 
-            <input type="text" id= "point" value="" name= "games"><br>
+            <input type="text" id= "point" value="" name= "points"><br>
         </p>
 
         <p>
-            <label id= "click1">
+            <label for = "draft" onclick = "Your Average Is: "></label>
             <input type="text" name = "average" id="avg" value = ""><br>
         </p>
 
@@ -96,7 +96,7 @@
         </p>
 
         <p>
-            <label id="click2">
+            <label for = "draft" onclick = "Your Percentage Is: "></label>
             <input type = button value = "Percent" onclick= "percent()">
         </p>
 
