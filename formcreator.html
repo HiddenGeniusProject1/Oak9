@@ -6,20 +6,21 @@
                 var games= document.getElementById("game").value;
                 var points= document.getElementById("point").value;  
                 var average = points/games;
+                document.getElementById("clickme").innerHTML = 'Your Average Is: ';
                 calc.average.value = average;
             }
 
             function percent(){
                 var prc = document.getElementById("game").value / document.getElementById("point").value;
+                document.getElementById("clickme").innerHTML = 'Your Percentage Is: ';
                 calc.average.value = prc;
             }
 
-            function label1(){
-                var avg1 = document.getElementById("click1").label = "Your Average Is:";
-            }
-
-            function label2(){
-                var prc1 = document.getElementById("click2").label = "Your Percentage Is:";             
+            function clearall(){
+                document.getElementById("game").value = ""
+                document.getElementById("point").value = ""
+                document.getElementById("avg").value = ""
+                document.getElementById("clickme").innerHTML = ""
             }
 
         </script>
@@ -79,25 +80,28 @@
     <form name = "calc">
         <p>
             <label for= "draft">Enter the amount of games played:</label> 
-            <input type="text" id= "game" value="" name= "games"><br>
+            <input type="text" id= "game" value="" name= "games">
         
         <p>
             <label for= "draft">Enter the total amount of points scored:</label> 
-            <input type="text" id= "point" value="" name= "points"><br>
+            <input type="text" id= "point" value="" name= "points">
         </p>
 
         <p>
-            <label for = "draft" onclick = "Your Average Is: "></label>
-            <input type="text" name = "average" id="avg" value = ""><br>
+            <label for = "draft" name = "click" id = "clickme"></label>
+            <input type="text" name = "average" id="avg" value = "">
         </p>
 
         <p>
-            <input type = button value = "Average Points Per Game" onclick= "avgPoints()"><br>
+            <input type = button value = "Average Points Per Game" onclick= "avgPoints()">
         </p>
 
         <p>
-            <label for = "draft" onclick = "Your Percentage Is: "></label>
             <input type = button value = "Percent" onclick= "percent()">
+        </p>
+
+        <p>
+            <input type = button value = "Clear" onclick="clearall()">
         </p>
 
     </form>
