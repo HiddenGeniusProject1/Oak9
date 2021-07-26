@@ -1,110 +1,78 @@
 <!DOCTYPE html>
 <html>
+    <style>
+        body {
+            text-align:Center;
+            background-color:black;
+        }
+        
+        h1{
+            color:green;
+        }
+
+        ul{
+            list-style:none;
+            display:inline-flex;
+        }
+
+        a{
+            border: 4px groove red;
+            text-decoration:none;
+            color:red;
+        }
+
+        li{
+            margin:10px;
+            font-size:30px;
+        }
+        
+        img{
+            margin-left:auto;
+            margin-right:auto;
+            //width:50%;
+            display:block;
+        }
+        
+        p{
+            color:green;
+            font-size:30px;
+        }
+        
+        .text a{
+            font-size:40px;
+        }
+        
+    </style>
     
-        <script type="text/javascript">
-            function avgPoints(){
-                var games= document.getElementById("game").value;
-                var points= document.getElementById("point").value;  
-                var average = points/games;
-                document.getElementById("clickme").innerHTML = 'Your Average Is: ';
-                calc.average.value = average;
-            }
-
-            function percent(){
-                var prc = document.getElementById("game").value / document.getElementById("point").value;
-                document.getElementById("clickme").innerHTML = 'Your Percentage Is: ';
-                calc.average.value = prc;
-            }
-
-            function clearall(){
-                document.getElementById("game").value = ""
-                document.getElementById("point").value = ""
-                document.getElementById("avg").value = ""
-                document.getElementById("clickme").innerHTML = ""
-            }
-
-        </script>
-
-        <style>
-        
-            body{
-                text-align:center;
-                color:white;
-                background-color:black;
-
-            }
-        
-            ul{
-                list-style:none;
-                display:inline-flex;
-            }
-
-            a{
-                border: 4px groove red;
-                text-decoration:none;
-                color:green;
-            }
-
-            li{
-                margin:10px;
-                font-size:30px;
-            }
-            
-
-        </style>
-
+    
     <head>
-        <title>Basketball Calculator</title>
+        <Title>Basketball Calculator</Title>
     </head>
-
-
-    <body>
     
-    <h1>Basketball Calculator</h1>
-
-        <ul>
+   <body>
+       <h1>Basketball Calculator</h1>
+       <ul>
             <li><a href= "index.html">Home</a></li>
             <li><a href= "AboutMe.html">About Me</a></li>
-            <li><a href= "Leadershipfile.html">Leadership</a></li>
+            <li><a href= "Leadershipfile.html">Leadership</a></li>           
             <li><a href= "History.html">History</a></li>
             <li><a href= "Players.html">Players</a></li>
-            <li><a href= "formcreator.html">Statistics Calculator</a></li> 
+            <li><a href= "formcreator.html">Statistics Calculator</a></li>          
             <li><a href= "Sources.html">Sources</a></li>
-            
        </ul>
+       
+       <img src="https://www.colorado.edu/coloradan/sites/default/files/styles/hero/public/article-image/march-math-ness.gif?itok=AhpnHcD4" width=600px>
 
-    <p>
-        <u><h3>Type the amount of points your player averaged this season</h3></u>
-    </p>
-      
-    <form name = "calc">
-        <p>
-            <label for= "draft">Enter the amount of games played:</label> 
-            <input type="text" id= "game" value="" name= "games">
-        
-        <p>
-            <label for= "draft">Enter the total amount of points scored:</label> 
-            <input type="text" id= "point" value="" name= "points">
-        </p>
+           <hr><p>Welcome to the Basketball Calculator! Press a button below to either calculate points, rebounds, or assists!</p>
+       
+            <div class = "text">
+                <ul>
+                    <li><a href= "formcreatorinpoints.html">Points</a></li>
+                    <li><a href= "formcreatorinrebounds.html">Rebounds</a></li>
+                    <li><a href= "formcreatorinassists.html">Assists</a></li>
+                </ul> 
+            </div>
 
-        <p>
-            <label for = "draft" name = "click" id = "clickme"></label>
-            <input type="text" name = "average" id="avg" value = "">
-        </p>
+   </body> 
 
-        <p>
-            <input type = button value = "Average Points Per Game" onclick= "avgPoints()">
-        </p>
-
-        <p>
-            <input type = button value = "Percent" onclick= "percent()">
-        </p>
-
-        <p>
-            <input type = button value = "Clear" onclick="clearall()">
-        </p>
-
-    </form>
-    
-    </body>
 </html>

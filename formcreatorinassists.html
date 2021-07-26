@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    
+        <script type="text/javascript">
+            function avgPoints(){
+                var games= document.getElementById("game").value;
+                var points= document.getElementById("point").value;  
+                var average = points/games;
+                document.getElementById("clickme").innerHTML = 'Your Average Is: ';
+                calc.average.value = average;
+            }
+
+            function percent(){
+                var prc = document.getElementById("game").value / document.getElementById("point").value;
+                document.getElementById("clickme").innerHTML = 'Your Percentage Is: ';
+                calc.average.value = prc;
+            }
+
+            function clearall(){
+                document.getElementById("game").value = ""
+                document.getElementById("point").value = ""
+                document.getElementById("avg").value = ""
+                document.getElementById("clickme").innerHTML = ""
+            }
+
+        </script>
+
+        <style>
+        
+            body{
+                text-align:center;
+                color:white;
+                background-color:black;
+
+            }
+        
+            ul{
+                list-style:none;
+                display:inline-flex;
+            }
+
+            a{
+                border: 4px groove red;
+                text-decoration:none;
+                color:green;
+            }
+
+            li{
+                margin:10px;
+                font-size:30px;
+            }
+            
+
+        </style>
+
+    <head>
+        <title>Basketball Calculator</title>
+    </head>
+
+
+    <body>
+    
+    <h1>Basketball Calculator</h1>
+
+        <ul>
+            <li><a href= "index.html">Home</a></li>
+            <li><a href= "AboutMe.html">About Me</a></li>
+            <li><a href= "Leadershipfile.html">Leadership</a></li>
+            <li><a href= "History.html">History</a></li>
+            <li><a href= "Players.html">Players</a></li>
+            <li><a href= "formcreator.html">Statistics Calculator</a></li> 
+            <li><a href= "Sources.html">Sources</a></li>
+            
+       </ul>
+
+    <p>
+        <u><h3>Type the amount of assists your player averaged this season</h3></u>
+    </p>
+      
+    <form name = "calc">
+        <p>
+            <label for= "draft">Enter the amount of games played:</label> 
+            <input type="text" id= "game" value="" name= "games">
+        
+        <p>
+            <label for= "draft">Enter the total amount of assists scored:</label> 
+            <input type="text" id= "point" value="" name= "points">
+        </p>
+
+        <p>
+            <label for = "draft" name = "click" id = "clickme"></label>
+            <input type="text" name = "average" id="avg" value = "">
+        </p>
+
+        <p>
+            <input type = button value = "Average Assists Per Game" onclick= "avgPoints()">
+        </p>
+
+        <p>
+            <input type = button value = "Percent" onclick= "percent()">
+        </p>
+
+        <p>
+            <input type = button value = "Clear" onclick="clearall()">
+        </p>
+
+    </form>
+    
+    </body>
+</html>
