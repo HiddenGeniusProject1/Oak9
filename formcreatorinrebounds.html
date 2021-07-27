@@ -2,23 +2,23 @@
 <html>
     
         <script type="text/javascript">
-            function avgPoints(){
+            function avgRebounds(){
                 var games= document.getElementById("game").value;
-                var points= document.getElementById("point").value;  
-                var average = points/games;
+                var rebounds= document.getElementById("rebound").value;  
+                var average = rebounds/games;
                 document.getElementById("clickme").innerHTML = 'Your Average Is: ';
                 calc.average.value = average;
             }
 
             function percent(){
-                var prc = document.getElementById("game").value / document.getElementById("point").value;
+                var prc = document.getElementById("game").value / document.getElementById("rebound").value;
                 document.getElementById("clickme").innerHTML = 'Your Percentage Is: ';
                 calc.average.value = prc;
             }
 
             function clearall(){
                 document.getElementById("game").value = ""
-                document.getElementById("point").value = ""
+                document.getElementById("rebound").value = ""
                 document.getElementById("avg").value = ""
                 document.getElementById("clickme").innerHTML = ""
             }
@@ -95,7 +95,7 @@
         
         <p>
             <label for= "draft">Enter the total amount of rebounds:</label> 
-            <input type="text" id= "point" value="" name= "points">
+            <input type="text" id= "rebound" value="" name= "rebounds">
         </p>
 
         <p>
@@ -104,7 +104,7 @@
         </p>
 
         <p>
-            <input type = button value = "Average Rebounds Per Game" onclick= "avgPoints()">
+            <input type = button value = "Average Rebounds Per Game" onclick= "avgRebounds()">
         </p>
 
         <p>
